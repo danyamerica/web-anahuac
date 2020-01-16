@@ -8,6 +8,7 @@
     <meta name="author" content="América Barrientos">
     <title>Ejercicio 1.</title>
     <!-- Maneras de agregar css: Dentro de una etiqueta </style> -->
+    <link rel="stylesheet" href="css/estilos.css">
     <style> 
     html {
         scroll-behavior: smooth;
@@ -25,28 +26,61 @@
                     <!-- El # no te lleva a algún lugar con un id establecido, _____.html te lleva a la página con ese nombre. -->
                    <a href="#"> <li>Inicio</li></a>
                    <a href="portafolio.html"> <li>Portafolio</li></a>
-                        <ul>
-                            <a href=""><li>Diseño</li></a>
-                            <a href=""><li>Fotografía</li></a>
-                            <a href=""><li>Animación</li></a>
-                        </ul>
+                   <a href=""><li>Diseño</li></a>
+                   <a href=""><li>Fotografía</li></a>
+                   <a href=""><li>Animación</li></a>
                    <a href="#contacto"> <li>Contacto</li></a>
                 </ul>
             </nav>
         </header>
         <!-- Aquí comienza mi main text-->
         <main>
-            <h1>Primer página web.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius velit quidem aut sint ad rerum amet, porro dolores optio fugit quas, omnis voluptatum autem repellendus itaque veniam nostrum praesentium sit.</p>
-            <img src="images/erizo_logo.svg" alt="Logo de erizos">
-            <img src="images/erizo.jpg" alt="Imagen de erizo tierno">
-            <img src="images/erizo_nadando.gif" alt="GIF de erizo nadando">
-            <img src="images/erizos.png" alt="Imagen de erizos juntos">
+            <h1 style="color: rgb(151, 221, 85);">Primer página web.</h1>
+            <p class="parrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius velit quidem aut sint ad rerum amet, porro dolores optio fugit quas, omnis voluptatum autem repellendus itaque veniam nostrum praesentium sit.</p>
+            <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut praesentium libero deleniti quam autem rerum tempora doloremque repellendus eveniet quas, iste sit porro asperiores et incidunt culpa natus facere in.</p>
+
+            <section>
+                <h2>Imágenes</h2>
+                <img src="images/erizo_logo.svg" alt="Logo de erizos">
+                <img src="images/erizo.jpg" alt="Imagen de erizo tierno">
+                <img src="images/erizo_nadando.gif" alt="GIF de erizo nadando">
+                <img src="images/erizos.png" alt="Imagen de erizos juntos">
+            </section>
+
+            <section>
+                <h2>Videos local</h2>
+                <video controls>
+                        <source src="media/hedgehogs.mp4" type="video/mp4">
+                        <source src="media/hedgehogs.ogv" type="video/ogg">
+                      Your browser does not support the video tag.
+                      </video> 
+                </video>
+                <h2>Videos online</h2>
+                <h3>Vimeo</h3>
+                <iframe src="https://player.vimeo.com/video/382585985" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <h3>YouTube</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TmJl5aMkAF8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+            
+            <section>
+                <h2>Audios</h2>
+                <audio controls>
+                        <source src="media/angels.mp3" type="audio/mpeg">
+                        <source src="media/angels.ogg" type="audio/ogg">
+                      Your browser does not support the video tag.
+                      </video> 
+                </video>
+            </section>
+            <section>
+                <h2>Mapa</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1098635.8912761796!2d-78.01122797563077!3d24.48258197469702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x892932baf1cdd125%3A0x9305d63edbefdda9!2sWest%20Side%20National%20Park!5e0!3m2!1ses-419!2smx!4v1579184733845!5m2!1ses-419!2smx" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </section>
         </main>
         <!-- Aquí comienza mi footer-->
         <footer id="contacto">
             <ul>
-                <a href="https://www.instagram.com/danya_america/" target="_blank"><li>Instagram</li></a>
+                <a href="https://www.instagram.com/danya_america/" target="_blank"><img src="images/IG.svg" alt="Logo de Instagram" class="logo"></a>
+                <a href="https://www.facebook.com/amk.barrieentoos" target="_blank"><img src="images/FB.svg" alt="Logo de Facebook" class="logo"></a>
             </ul>
         </footer>
     </div>
