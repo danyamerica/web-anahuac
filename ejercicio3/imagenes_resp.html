@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="América Barrientos">
+    <title>Imágenes Responsivas.</title>
+    <link rel="stylesheet" href="css/res.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Imágenes responsivas</h1>
+        </header>
+
+        <main>
+            <img src="images/perezoso.jpg" alt="Imagen de perezoso." sizes="(max-width:1200px) 100vw, 1200px"
+            srcset="
+                images/perezoso-468.jpg 468w,
+                images/perezoso-768.jpg 768w,
+                images/perezoso-1024.jpg 1024w,
+                images/perezoso-1920.jpg 1920w,
+                ">
+                <picture class="ancho">
+                    <source media="(max-width: 468px)" srcset="images/perezoso-468.jpg">
+                    <source media="(min-width: 768px)" srcset="images/perezoso-768.jpg">
+                    <img src="images/perezoso.jpg" alt="Perezoso">
+                </picture>
+        </main>
+
+        <footer>
+            <p>Sitio &copy</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
