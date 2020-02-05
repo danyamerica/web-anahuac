@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="content" content="Ejercicio 4, vivus.js">
+    <meta name="author" content="América Barrientos">
+    <title>Ejercicio 4.</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+    object, svg {
+        width: 50vw;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Vivus.js</h1>
+        </header>
+
+        <aside>
+            <ul>
+                <li><a href="https://maxwellito.github.io/vivus/">Vivus.js</a></li>
+                <li><a href="https://github.com/maxwellito/vivus">Vivus Github</a></li>
+                <li><a href="https://www.jsdelivr.com/package/npm/vivus">Vivus CDN</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <!-- Con SVG puesto directamente -->
+            <h2>SVG directo</h2>
+            <svg id="svg-logo" data-name="svg-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 792"><defs><style>.cls-1{fill:none;stroke:#00983a;stroke-miterlimit:10;stroke-width:5px;}</style></defs><title>logo</title><path class="cls-1" d="M345.67,87l45.38,91.94a25.88,25.88,0,0,0,19.48,14.16L512,207.84c21.22,3.09,29.7,29.16,14.34,44.13l-73.43,71.58a25.88,25.88,0,0,0-7.44,22.9l17.34,101.06c3.62,21.13-18.56,37.25-37.54,27.27l-90.76-47.71a25.83,25.83,0,0,0-24.08,0l-90.76,47.71c-19,10-41.16-6.14-37.54-27.27l17.33-101.06a25.85,25.85,0,0,0-7.44-22.9L118.6,252c-15.36-15-6.89-41,14.34-44.13L234.41,193.1a25.9,25.9,0,0,0,19.48-14.16L299.27,87C308.76,67.77,336.18,67.77,345.67,87Z"/><path class="cls-1" d="M439.56,126l-8.65,102.17a25.84,25.84,0,0,0,9.37,22.18l79.26,65.05C536.12,329,529.9,355.75,509,360.63L409.18,384A25.88,25.88,0,0,0,391,399.75l-37.37,95.48c-7.81,20-35.13,22.31-46.23,4l-53.06-87.74A25.87,25.87,0,0,0,233.7,399l-102.36-6c-21.41-1.26-32.07-26.52-18-42.75l67.05-77.57a25.88,25.88,0,0,0,5.46-23.45L159.9,150c-5.41-20.75,15.32-38.7,35.08-30.38l94.5,39.8a25.86,25.86,0,0,0,24-2.06l86.36-55.28C417.89,90.51,441.36,104.67,439.56,126Z"/><path class="cls-1" d="M484.5,176.69l-44,92.62a25.87,25.87,0,0,0,1,24.06l51.36,88.75c10.74,18.56-4.47,41.38-25.73,38.61L365.42,407.51a25.87,25.87,0,0,0-22.58,8.37l-68.53,76.26c-14.34,15.95-40.74,8.54-44.68-12.53L210.79,378.82a25.88,25.88,0,0,0-14.94-18.9l-93.71-41.61c-19.6-8.7-20.71-36.1-1.88-46.36l90-49.07a25.87,25.87,0,0,0,13.35-20l10.62-102C216.48,79.52,242.2,70,257.78,84.74l74.49,70.46a25.89,25.89,0,0,0,23.18,6.51l100.28-21.42C476.7,135.81,493.7,157.32,484.5,176.69Z"/>
+            </svg>  
+
+            <!-- Con objeto -->
+            <h2>En objeto.</h2>
+            <object id="my-svg" type="image/svg+xml" data="img/logo.svg"></object>
+
+            <!-- En un simple id con div-->
+            <h2>En div.</h2>
+            <div id="estrella"></div>
+
+        </main>
+
+        <footer>
+            Copyright | Danya América Barrientos Ayala
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.5/dist/vivus.min.js"></script>
+    <script>
+        new Vivus('svg-logo', {duration: 200},);
+        new Vivus ('my-svg', {type: 'delayed', duration: 150},);
+        new Vivus ('estrella', {duration:100, type: 'scenario-sync', file: 'img/logo.svg'},);
+    </script>
+
+</body>
+</html>
