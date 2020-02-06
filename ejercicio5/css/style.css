@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+/* CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* BOX RESET */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /* MIS ESTILOS */
+  header { 
+      background-color: #3f3f8b;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 10vmin;
+  }
+  body {
+      font-family:'Quicksand', sans-serif;
+      background-color: beige;
+  }
+
+  .container {
+      width:80vw;
+      margin: 0 auto;
+      background-color: #ffffff;
+  }
+
+  h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffffff;
+  }
+
+  h2 {
+      font-size: 2rem;
+      font-weight: 700;
+  }
+
+  p {
+      font-weight: 300;
+  }
+
+  h1, h2, p, img {
+      padding: .4rem;
+  }
+
+  #vangogh {
+      width: 200px;
+      float: left;
+      shape-outside: circle(97px at center center);
+  }
+  #girasoles {
+      width: 200px;
+      float: left;
+      shape-outside: polygon(0% 0%, 88.5% -1%, 91.29% 13.98%, 92.5% 34.5%, 84.85% 53.53%, 84.16% 69.72%, 82% 100%, 0% 100%);
+      clip-path: polygon(18% 24%, 23.61% 11%, 45.79% 10.4%, 62.64% 1.45%, 86.5% 7.5%, 88.49% 20.44%, 85.61% 34.52%, 87.11% 44.51%, 78.95% 51.48%, 83.5% 58.5%, 81.79% 66.38%, 73.75% 72.3%, 67.15% 85.2%, 63% 95.5%, 44% 94.5%, 33.80% 69.50%, 18.23% 63.49%, 12.67% 43.6%);
+      }
+  #pocket { 
+      float: left;
+      shape-outside: url(../img/241008284a75689063cfb775c44bce72.png)
+      ;
+  }
+  
+main{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "u u u d d d"
+    "u u u d d d"
+    "t t t d d d"
+    "t t t . . .";
+}
+#uno {
+    grid-area: u;
+}
+#dos
+ {
+     grid-area: d;
+ }
+ #tres
+ {
+     grid-area: t;
+ }
