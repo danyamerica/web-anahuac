@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway&display=swap'); 
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  h1, h2 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      padding: 1em;
+  }
+
+  p,li {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .container {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 100px 1fr 1fr 1fr 1fr 200px;
+      gap: 5px;
+      grid-template-areas: 
+      "h h h h h h h h"
+      "m m m m m m . ."
+      "m m m m m m . ."
+      "m m m m m m . ."
+      "m m m m m m . ."
+      "f f f f f f f f"
+      ;
+  }
+    
+  header {
+      grid-area: h;
+      background-color: #cca6eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  main {
+      grid-area: m;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  footer {
+      grid-area: f;
+      background-color: #6e016e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-content: center;
+      width: 40vw;
+  }
+
+  section {
+    width: 20vw;  
+    height: 20vh;
+    border: solid purple 1px;
+    border-radius: 5px;
+    margin: 0.5rem;
+  }
+  a {
+      text-decoration: none;
+      color: #ffffff;
+  }
+
+  a:hover {
+      color: #67007c;
+  }
+
+  footer a:hover{
+      color: #cf00cf;
+  }
+
+  img {
+      width: 3em;
+      height: 3em;
+  }
