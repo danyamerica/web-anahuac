@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Neuton|Work+Sans&display=swap');
+
+/**** BOX RESET ****/
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /**** ROOT ****/
+  :root {
+    --color1: #fcf9ea ;
+    --color2: #badfdb;
+    --color3: #49beb7;
+    --color4: #ff8a5c;
+}
+
+  /**** MIS ESTILOS ****/
+  h1 {
+    font-family: 'Neuton', serif;
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-family: 'Neuton', serif;
+  }
+
+  p, li {
+    font-family: 'Work Sans', sans-serif;
+  }
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 70px 1fr 1fr 1fr 1fr 100px;
+    row-gap: 5px;
+    grid-template-areas: 
+    "h h h h h h h h"
+    "a m m m m m m m"
+    "a m m m m m m m"
+    "a m m m m m m m"
+    "a m m m m m m m"
+    "f f f f f f f f"
+}
+
+header {
+    grid-area: h;
+    background-color: var(--color3);
+}
+
+aside {
+    grid-area: a;
+    background-color: var(--color4);
+}
+
+main {
+    grid-area: m;
+    background-color: var(--color1);
+}
+
+footer {
+    grid-area: f;
+    background-color: var(--color3);
+}

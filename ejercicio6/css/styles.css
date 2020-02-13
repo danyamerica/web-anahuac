@@ -83,7 +83,10 @@ html {
       color: #cf00cf;
   }
 
-  img {
-      width: 3em;
-      height: 3em;
-  }
+i.fas, i.fab {
+    font-size:2rem;
+}
+
+i.fas:hover, i.fab:hover {
+    color: #1b0f1b;
+}
