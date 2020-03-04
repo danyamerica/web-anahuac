@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Neuton|Work+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat&display=swap');
 
 /**** BOX RESET ****/
 html {
@@ -8,40 +9,78 @@ html {
     box-sizing: inherit;
   }
 
+  /**** MEDIA QUERY ****/
+
+    /* ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops */
+@media (min-width: 1281px) {
+}
+
+  /* ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+  /* ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+  /* ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+  /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+  /* ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+}
+
   /**** ROOT ****/
   :root {
     --color1: #fcf9ea ;
-    --color2: #badfdb;
-    --color3: #49beb7;
-    --color4: #ff8a5c;
+    --color2: #F9CDCD;
+    --color3: #C58B8B;
+    --color4: #B56564;
 }
 
   /**** MIS ESTILOS ****/
   h1 {
-    font-family: 'Neuton', serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 4rem;
   }
 
+  #nombre { 
+    font-size: 1rem;
+    margin-top: 1%;
+    margin-left: 44%;
+    margin-right: 35%;
+  }
+
   h2 {
-    font-family: 'Neuton', serif;
+    font-family: 'Josefin Sans', sans-serif;
   }
 
   p, li {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
 
 .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 70px 1fr 1fr 1fr 1fr 100px;
-    row-gap: 5px;
+    grid-template-rows: 160px 130px 130px 130px 130px 50px;
     grid-template-areas: 
     "h h h h h h h h"
-    "a m m m m m m m"
-    "a m m m m m m m"
-    "a m m m m m m m"
-    "a m m m m m m m"
+    "m m m m m m m m"
+    "m m m m m m m m"
+    "m m m m m m m m"
+    "m m m m m m m m"
     "f f f f f f f f"
 }
 
@@ -50,17 +89,46 @@ header {
     background-color: var(--color3);
 }
 
-aside {
-    grid-area: a;
-    background-color: var(--color4);
-}
-
 main {
     grid-area: m;
-    background-color: var(--color1);
+    background-image: url(../../img/fondo.svg);
+    background-color: #ffffff;
+    background-size: cover;
+    
 }
 
 footer {
     grid-area: f;
     background-color: var(--color3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+object, svg {
+  width: 10vw;
+  display: flex;
+  margin-top: 1%;
+  margin-left: 45%;
+  margin-right: 50%;
+}
+
+#footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 40vw;
+}
+
+#footer a { 
+  text-decoration: none;
+  color: var(--color1);
+}
+
+#copyright {
+  display: flex;
+  flex-wrap: wrap;
+
+
 }
