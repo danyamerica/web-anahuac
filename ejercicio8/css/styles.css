@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: lightcoral;
+    height: 50px;
+    margin-bottom: 0;
+    display: flex;
+}
+
+h1,h2 {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}

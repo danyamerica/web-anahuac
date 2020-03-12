@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Ejercicio Scroll Reveal</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+
+        </header>
+
+        <section>
+            <h1 class="titulo">Scrollreveal</h1>
+            <p class="parrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, molestiae sint quod, magnam officia perferendis voluptates libero deleniti sequi ab dolorum nisi nam soluta. Dignissimos ut cumque omnis sequi aliquam?</p>
+            <img 
+                src="https://picsum.photos/seed/picsum/800/500" alt="Imagen aleatoria 1" class="imagen">
+        </section>
+
+        <section>
+            <h2 class="titulo">Subtítulo aquí</h2>
+            <img src="https://picsum.photos/500/300/?blur" alt="Imagen borrosa" class="imagen">
+            <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, tempore repellat! Quisquam et voluptatum officiis, ratione eos tempore praesentium neque quasi cumque libero delectus sunt, ipsa est? Qui, iste iure.</p>
+            <img src="https://picsum.photos/800/400" alt="Imagen aleatoria 2" class="imagen">
+        </section>
+
+        <footer>
+            <p>América Barrientos ©</p>
+        </footer>
+    </div>
+
+    <script>
+    ScrollReveal().reveal('.titulo', {scale: 0.85});
+
+    ScrollReveal().reveal('.imagen', {delay:250, duration: 500, reset:true });
+
+    ScrollReveal({distance:'150px', reset:true});
+    ScrollReveal().reveal ('.parrafo', {origin: 'right'});
+    </script>
+    
+</body>
+</html>
