@@ -1,0 +1,374 @@
+/**** BOX RESET ****/
+*, ::before , ::after {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul, dl {
+    list-style-type: none;
+}
+
+/**** ROOT ****/
+:root {
+    --color1: #fcf9ea;
+    --color2: #F9CDCD;
+    --color3: #C58B8B;
+    --color4: #B56564;
+    --color5: #ffffff;
+    --sectionPadding: 50px;
+}
+
+/**** MIS ESTILOS ****/
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(15px + 4.5vw);
+    line-height: 1.25em;
+    color: var(--color5);
+    font-weight: 500;
+    margin: 0;
+    position: relative;
+    z-index: 3;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(15px + 1vw);
+    line-height: 1.5em;
+    color: var(--color4);
+    font-weight: 200;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(15px + 1.5vw);
+    line-height: 1em;
+    color: var(--color3);
+    font-weight:300;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(15px + .2vw);
+    line-height: 4em;
+    color: var(--color4);
+    font-weight: 100;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: calc(15px + .5vw);
+    line-height: 1.75em;
+    font-weight: 300;
+    color: #000000;
+}
+
+p a {
+    font-size: inherit;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: calc(15px + .5vw);
+    line-height: 1.75em;
+    font-weight: 400;
+    color: var(--color5);
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* ---------------------------------------- HEADER STYLES ---------------------------------------------*/
+
+/*** Aquí se activa el CSS GRID "display:grid" ***/
+header {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+    padding-left: 1%;
+}
+
+.fondo-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--color3);
+    z-index: 1;
+    -webkit-transform: skewY(-8deg);
+    transform: skewY(-8deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+
+.texto-header{
+    grid-column: 2/6;
+    grid-row: 2/3;
+    color: var(--color5);
+    position: relative;
+    z-index: 3;
+    padding: 3em 0;
+}
+
+.headerimg {
+    grid-column: 7/12;
+    grid-row: 2/4;
+    z-index: 2;
+}
+
+.headerimg img {
+    width: 100%;
+}
+
+/* Otra CSS GRID para NAV*/
+nav {
+    grid-column: 2/12;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+nav .nombre {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(15px + .1em);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    color: var(--color5);
+    transition: all 0.2s ease-in-out;
+}
+
+nav .nombre:hover {
+    color: var(--color5);
+    background: var(--color4);
+    transition: all 0.2s ease-in-out;
+}
+
+nav .menunav1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+    align-items: center;
+}
+
+nav .menunav1 a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color5);
+    font-size: calc(15px + .1em);
+    font-weight: 100;
+}
+
+.menunav1 a:hover {
+    color: var(--color5);
+    background: var(--color4);
+    transition: all 0.2s ease-in-out;
+}
+
+.nav1 {
+    list-style-type:none;
+}
+
+/*---------------------------------------------------- MAIN STYLES -------------------------------------------------*/
+main {
+    background: var(--color5);
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    padding: 4em 0;
+}
+
+.section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(15px + 1vw);
+    line-height: 1.5em;
+    color: var(--color4);
+    font-weight: 400;
+}
+
+.button {
+    display: inline-block;
+    color: var(--color5);
+    background: var(--color3);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.75em 2em;
+    border-radius: 2em;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+.button:hover {
+    background: var(--color4);
+  }
+
+.section .button {
+    margin: 1em 0;
+}
+
+.quote {
+    color: var(--color4);
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: auto;
+    text-align: center;
+    padding: 4em var(--sectionPadding) 0;
+}
+
+/* CSS GRID para teaser section */
+.section.teaser {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.sectionImg {
+    background: url(../img/diseno.svg) no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 400px;
+    grid-column: 1/7;
+}
+
+.teaserQuienSoy .sectionCopy {
+    grid-column: 8/12;
+}
+
+.teaserEducacion .sectionImg {
+    background: url(../img/estudios.svg) no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 400px;
+    grid-column: 7/13;
+    grid-row: 1/2;
+}
+
+.teaserEducacion .sectionCopy {
+    grid-column: 2/6;
+}
+
+.habilidades {
+    padding: 0 var(--sectionPadding) 5em;
+}
+
+.habilidades h3 {
+    text-align: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.5em;
+}
+
+.grid-3 .grid-3-item h4 {
+    font-weight: 500;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    text-align: center;
+}
+
+.grid-3 .grid-3-item .grid-3-img {
+    margin: 2em 0;
+    width: 100%;
+    height: 250px;
+}
+
+/*Imagen Diseño*/
+.grid-3 .grid-3-item:nth-of-type(1) .grid-3-img {
+    background: url(../img/proyectos/img-5.gif) no-repeat;
+    background-size: cover;
+    background-size: 125%;
+    background-position: center center;
+}
+
+/*Imagen Video*/
+.grid-3 .grid-3-item:nth-of-type(2) .grid-3-img {
+    background: url(../img/proyectos/img-4.gif) no-repeat;
+    background-size: cover;
+    background-size: 125%;
+    background-position: center center;
+}
+
+/*Imagen Modelado 3D*/
+.grid-3 .grid-3-item:nth-of-type(3) .grid-3-img {
+    background: url(../img/proyectos/img-3.gif) no-repeat;
+    background-size: 125%;
+    background-position: center center;
+}
+
+
+
+/* -------------------------------------------------- FOOTER STYLES ------------------------------------------------*/
+#footer {
+    padding: 1em 0;
+    background: var(--color3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.socialLinks { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    flex-wrap: wrap;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.iconSocial {
+    margin: 0 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.iconSocial:first-of-type {
+    margin-left: 0;
+}
+
+.iconSocial .fab {
+    font-size: 32px;
+    color: var(--color5);
+    transition: all 150ms ease-in;
+}
+
+.iconSocial .fab:hover {
+    color: var(--color4);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  /*----------------- MEDIA QUERIES --------------------*/
+  @media screen and (max-width:600px) {
+    nav .menunav1 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: .5em;
+        align-items: center;
+    }
+  }

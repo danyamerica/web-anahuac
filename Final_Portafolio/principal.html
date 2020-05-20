@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <!-- META TAGS CON IMPORTANCIA ALTA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- META TAGS CON IMPORTANCIA MEDIA -->
+    <meta name="author" content="América Barrrientos">
+    <meta name="description" content="Portafolio web profesional de América Barrientos, diseñadora multimedia mexicana.">
+    <meta name="keywords" content="diseño, multimedia, portafolio, animación 3D, edición">
+
+    <title>América Barrientos</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- FAVICON
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">-->
+    <!-- FONT AWESOME ICONS -->
+    <script src="https://kit.fontawesome.com/73f4f7cec7.js"></script>
+    <!-- AOS.JS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- VIVUS.JS -->
+    <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/vivus">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/principal-styles.css">
+
+    <!-- ICONO PESTAÑA -->
+    <link rel="icon" href="img/logo.ico">
+</head>
+
+<body>
+
+<div class="container">
+    <!-------------- HEADER --------------->
+    <header>
+        <div class="fondo-header"></div>
+        <!-- MENÚ-->
+        <nav>
+            <h3><a href="index.html" class=nombre>América Barrientos</a></h3>
+            <div class="menunav1">
+                    <li class="nav1"><a href="principal.html">Inicio</a></li>
+                    <li class="nav1"><a href="portafolio.html">Portafolio</a></li>
+                    <li class="nav1"><a href="contacto.html">Contacto</a></li>
+            </div><!--./menunav1-->
+        </nav>
+        <div class="texto-header">
+            <h1>Diseñadora Multimedia</h1>
+        </div><!--/.texto-header-->
+        <div class="headerimg">
+            <img id=#image1 src="img/header_img_600.jpg" alt="América Barrientos con computadora y logo DABA" 
+            srcset="img/header_img_250.jpg 250w, img/header_img_500.jpg 500w, img/header_img_750.jpg 750w, img/header_img_1000.jpg 1000w">
+        </div>
+    </header>
+
+    <!---------------- MAIN ---------------->
+    <main>
+        <section class="quote">
+            <h2>"Las grandes cosas no están hechas por impulso, <br> sino de una serie de pequeñas cosas".</h2>
+            <h5>- Vincent Van Gogh</h3>
+        </section><!--/.quote-->
+        <section class="section teaser teaserQuienSoy mobileCenter" id="quiensoy">
+            <div class="sectionImg"></div>
+            <div class="sectionCopy" data-aos="fade-up">
+                <h3>¿Quién soy?</h3>
+                <p>Soy una persona muy creativa, responsable y organizada; me gusta vivir nuevas experiencias y busco formar parte de una empresa que me permita aportar ideas nuevas y desarrollar mis habilidades.</p>
+            </div>
+        </section>
+        <section class="section teaser teaserEducacion mobileCenter">
+            <div class="sectionImg"></div>
+            <div class="sectionCopy" data-aos="fade-up">
+                <h3>Mi Educación</h3>
+                <p>Actualmente soy estudiante de 6° semestre de la Lic. Diseño Multimedia en la Universidad Anáhuac México y busco especializarme en Animación. <br> Aquí puedes descargar mi CV:</p>
+                <a href="docs/CV_America_Barrientos.pdf" target="_blank" class="button">CV</a>
+            </div>
+        </section>
+        <section class="habilidades section">
+            <h3>Éstas son algunas de mis habilidades...</h3>
+            <div class="grid-3">
+                <div class="grid-3-item">
+                    <div class="grid-3-img quality" data-aos="zoom-in"></div>
+                    <a href="portafolio.html"><h4 class="skill">Diseño</h4></a>
+                </div>
+                <div class="grid-3-item">
+                    <div class="grid-3-img" data-aos="zoom-in" data-aos-delay="150"></div>
+                    <a href="portafolio.html"><h4 class="skill">Video</h4></a>
+                </div>
+                <div class="grid-3-item">
+                    <div class="grid-3-img" data-aos="zoom-in" data-aos-delay="300"></div>
+                    <a href="portafolio.html"><h4 class="skill">Modelado 3D</h4></a>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--------------- FOOTER --------------->
+    <footer id="footer">
+        <div class="socialLinks">
+            <a class="iconSocial" href="https://www.instagram.com/daba.diseno/"><i class="fab fa-instagram"></i></a>
+            <a class="iconSocial" href="https://twitter.com/danya_america"><i class="fab fa-twitter"></i></a>
+            <a class="iconSocial" href="https://www.facebook.com/amk.barrieentoos"><i class="fab fa-facebook-square"></i></a>
+        </div>
+
+    </footer>
+
+</div> <!--/.container-->
+
+    <!-- SCRIPT AOS.JS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166282490-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-166282490-1');
+    </script>
+
+</body>
+</html>

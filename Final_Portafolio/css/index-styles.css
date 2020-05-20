@@ -1,0 +1,90 @@
+/**** BOX RESET ****/
+*, ::before , ::after {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/**** ROOT ****/
+:root {
+    --color1: #fcf9ea;
+    --color2: #F9CDCD;
+    --color3: #C58B8B;
+    --color4: #B56564;
+    --color5: #ffffff;
+    --sectionPadding: 50px;
+}
+
+/**** MIS ESTILOS ****/
+body {
+    background-color: var(--color3);
+    background-image: url(../img/fondo_landing_Mesa\ de\ trabajo\ 1.png);
+    -webkit-background-size:cover; 
+    background-size: cover;
+    background-position: center center; 
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.nombre h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    color: var(--color5);
+    text-transform: uppercase;
+    margin-top: 1%;
+    letter-spacing: .2em;
+}
+
+.texto h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: 200;
+    color: var(--color5);
+    margin-top: 3%;
+}
+ 
+#logo-daba {
+    height:40vh;
+}
+
+.button a {
+    display: inline-block;
+    color: var(--color3);
+    background: var(--color5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 0.75em 2em;
+    border-radius: 2em;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 2em;
+  }
+  
+  .button a:hover {
+      background: var(--color4);
+      color: var(--color5);
+      font-weight: 400;
+    }

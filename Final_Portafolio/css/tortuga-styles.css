@@ -1,0 +1,301 @@
+/**** BOX RESET ****/
+*, ::before , ::after {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul, dl {
+    list-style-type: none;
+}
+
+/**** ROOT ****/
+:root {
+    --color1: #fcf9ea;
+    --color2: #F9CDCD;
+    --color3: #C58B8B;
+    --color4: #B56564;
+    --color5: #ffffff;
+    --color6: #b56564af;
+    --sectionPadding: 50px;
+}
+
+/**** MIS ESTILOS ****/
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(15px + 4vw);
+    text-transform: uppercase;
+    line-height: 1.25em;
+    color: var(--color4);
+    font-weight: 500;
+    margin: 0;
+    position: relative;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(15px + 1vw);
+    font-weight: 200;
+    color: var(--color3);
+    padding-bottom: 3%;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: calc(15px + .3vw);
+}
+
+
+/* ---------------------------------------- HEADER STYLES ---------------------------------------------*/
+
+header {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-left: 1%;
+}
+
+.fondo-header {
+    position: absolute;
+    background: var(--color3);
+    top: 0;
+    right: 0;
+    bottom:0;
+    left: 0;
+    z-index: 1;
+}
+
+/* CSS GRID para NAV*/
+nav {
+    grid-column: 2/12;
+    grid-row: 2/2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+nav .nombre {
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 1.1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    color: var(--color5);
+    transition: all 0.2s ease-in-out;
+}
+
+nav .nombre:hover {
+    color: var(--color5);
+    background: var(--color4);
+    transition: all 0.2s ease-in-out;
+}
+
+nav .menunav1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+    align-items: center;
+}
+
+nav .menunav1 a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color5);
+    font-size: 1.1em;
+    font-weight: 100;
+}
+
+.menunav1 a:hover {
+    color: var(--color5);
+    background: var(--color4);
+    transition: all 0.2s ease-in-out;
+}
+
+.nav1 {
+    list-style-type: none;
+}
+
+/* ---------------------------------------- MAIN STYLES ---------------------------------------------*/
+main {
+    background: var(--color5);
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    max-width: 120em;
+    margin: auto;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5em;
+    padding: 6%;
+    grid-template-areas: 
+    '. vt ex .';
+}
+
+#video-tortuga {
+    width: 600px;
+    grid-area: vt;
+}
+
+.explicacion {
+    grid-area: ex;
+    text-align: justify;
+    margin-top: 10%;
+}
+
+.button {
+    display: inline-block;
+    color: var(--color5);
+    background: var(--color3);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.75em 2em;
+    border-radius: 2em;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 8%;
+  }
+
+.button:hover {
+    background: var(--color4);
+  }
+
+
+
+/* ---------------------------------------- FOOTER STYLES ---------------------------------------------*/
+#footer {
+    padding: 1em 0;
+    background: var(--color3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.socialLinks { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    flex-wrap: wrap;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.iconSocial {
+    margin: 0 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.iconSocial:first-of-type {
+    margin-left: 0;
+}
+
+.iconSocial .fab {
+    font-size: 32px;
+    color: var(--color5);
+    transition: all 150ms ease-in;
+}
+
+.iconSocial .fab:hover {
+    color: var(--color4);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+/*--------------------- MEDIA QUERIES -----------------------*/
+@media screen and (max-width: 900px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1.5em;
+        padding: 6%;
+        grid-template-areas: 
+        'vt vt'
+        'ex ex';
+    }
+
+    #video-tortuga {
+        width: 800px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .explicacion {
+        margin-top: 5%;
+        align-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    h2 {
+        padding-left: 32%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1.5em;
+        padding: 6%;
+        grid-template-areas: 
+        'vt vt'
+        'ex ex';
+    }
+
+    #video-tortuga {
+        width: 500px;
+    }
+    
+    .explicacion {
+        margin-top: 5%;
+        align-content: center;
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+    
+    h2 {
+        padding-left: 25%;
+    }
+
+    p {
+        font-size: .9em;
+        line-height: 1.5em;
+    }
+}
+

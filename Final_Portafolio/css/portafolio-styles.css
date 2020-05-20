@@ -1,0 +1,315 @@
+/**** BOX RESET ****/
+*, ::before , ::after {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul, dl {
+    list-style-type: none;
+}
+
+/**** ROOT ****/
+:root {
+    --color1: #fcf9ea;
+    --color2: #F9CDCD;
+    --color3: #C58B8B;
+    --color4: #B56564;
+    --color5: #ffffff;
+    --color6: #b56564af;
+    --sectionPadding: 50px;
+}
+
+/**** MIS ESTILOS ****/
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(15px + 4vw);
+    text-transform: uppercase;
+    line-height: 1.25em;
+    color: var(--color4);
+    font-weight: 500;
+    margin: 0;
+    position: relative;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(15px + 1vw);
+    font-weight: 200;
+    color: var(--color3);
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: calc(15px + .3vw);
+}
+
+
+/* ---------------------------------------- HEADER STYLES ---------------------------------------------*/
+
+header {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-left: 1%;
+}
+
+.fondo-header {
+    position: absolute;
+    background: var(--color3);
+    top: 0;
+    right: 0;
+    bottom:0;
+    left: 0;
+    z-index: 1;
+}
+
+/* CSS GRID para NAV*/
+nav {
+    grid-column: 2/12;
+    grid-row: 2/2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+nav .nombre {
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 1.1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    color: var(--color5);
+    transition: all 0.2s ease-in-out;
+}
+
+nav .nombre:hover {
+    color: var(--color5);
+    background: var(--color4);
+    transition: all 0.2s ease-in-out;
+}
+
+nav .menunav1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+    align-items: center;
+}
+
+nav .menunav1 a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color5);
+    font-size: 1.1em;
+    font-weight: 100;
+}
+
+.menunav1 a:hover {
+    color: var(--color5);
+    background: var(--color4);
+    transition: all 0.2s ease-in-out;
+}
+
+.nav1 {
+    list-style-type: none;
+}
+
+/* ---------------------------------------- MAIN STYLES ---------------------------------------------*/
+main {
+    background: var(--color5);
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    padding-top: 5%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 120em;
+    margin: auto;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    padding: 5%;
+    grid-template-areas:
+    'img-1 img-3 img-3 img-2'
+    'img-1 img-4 img-5 img-5'
+    'img-7 img-7 img-8 img-8';
+}
+
+.image-gallery a {
+    width: 100%;
+    height: 25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-gallery a i {
+    color: var(--color5);
+    font-size: 3rem;
+    position: relative;
+    z-index: 100;
+    padding: 1rem 3rem;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.image-gallery a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color6);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.image-gallery a:hover i, .image-gallery a:hover::before {
+    opacity: 1;
+}
+
+.img-1 {
+    grid-area: img-1;
+    min-height: 51.5rem;
+    background-image:url(../img/proyectos/img-1.2.jpg);
+    background-position: left center;
+}
+
+.img-2 {
+    grid-area: img-2;
+    background-image:url(../img/proyectos/img-2.jpg);
+}
+
+.img-3 {
+    grid-area: img-3;
+    background-image:url(../img/proyectos/img-3.gif);
+}
+
+.img-4 {
+    grid-area: img-4;
+    background-image:url(../img/proyectos/img-4.gif);
+}
+
+.img-5 {
+    grid-area: img-5;
+    background-image:url(../img/proyectos/img-5.gif);
+}
+
+
+.img-7 {
+    grid-area: img-7;
+    background-image:url(../img/proyectos/img-7.gif);
+}
+
+.img-8 {
+    grid-area: img-8;
+    background-image:url(../img/proyectos/img-8.jpg);
+}
+
+
+/* ---------------------------------------- FOOTER STYLES ---------------------------------------------*/
+#footer {
+    padding: 1em 0;
+    background: var(--color3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.socialLinks { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    flex-wrap: wrap;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.iconSocial {
+    margin: 0 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.iconSocial:first-of-type {
+    margin-left: 0;
+}
+
+.iconSocial .fab {
+    font-size: 32px;
+    color: var(--color5);
+    transition: all 150ms ease-in;
+}
+
+.iconSocial .fab:hover {
+    color: var(--color4);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+
+/* ---------- MEDIA QUERIES --------*/
+@media screen and (max-width:900px) {
+    .image-gallery{
+        grid-template-areas:
+        'img-1 img-1 img-2 img-2'
+        'img-1 img-1 img-3 img-3'
+        'img-4 img-4 img-5 img-5'
+        /*Estos se agregan*/
+        'img-7 img-7 img-8 img-8';
+    }
+    
+    .image-gallery a{
+        height: 20rem;
+    }
+
+    .img-1 {
+        min-height: 41.5rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .image-gallery{
+        grid-template-areas:
+        'img-1 img-1 img-1 img-1'
+        'img-2 img-2 img-2 img-2'
+        'img-3 img-3 img-3 img-3'
+        /*Estos se agregan*/
+        'img-4 img-4 img-4 img-4'
+        'img-5 img-5 img-5 img-5'
+        'img-7 img-7 img-7 img-7'
+        'img-8 img-8 img-8 img-8';
+    }
+    
+    .image-gallery a, .img-1{
+        height: 30rem;
+        min-height: 30rem;
+    }
+}
